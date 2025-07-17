@@ -138,3 +138,23 @@ section {
   color: var(--main-color);
   border-color: var(--main-color);
 }
+.home .profession-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 768px;
+  height: 768px;
+  background: red; /* Fixed typo: 'Ored' → 'red' */
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.home .profession-container .profession-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 768px;
+  height: 768px;
+  background: purple;
+}
