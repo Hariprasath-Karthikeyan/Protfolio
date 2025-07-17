@@ -149,7 +149,6 @@ section {
   overflow: hidden;
   pointer-events: none;
 }
-
 .home .profession-container .profession-box {
   position: absolute;
   top: 0;
@@ -157,4 +156,15 @@ section {
   width: 768px;
   height: 768px;
   background: purple;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .profession-box .profession {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
