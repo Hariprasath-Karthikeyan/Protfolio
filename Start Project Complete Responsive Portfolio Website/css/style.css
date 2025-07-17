@@ -94,6 +94,7 @@ section {
 .home-content h1 {
   font-size: 5.6rem;
   font-weight: 700;
+  margin-bottom: .3rem;
 }
 .home-content p{
   font-size: 1.6rem;
