@@ -83,6 +83,7 @@ body {
   color: var(--text-color);
   opacity: .9;
 }
+
 section {
   min-height: 100vh;
   padding: 10rem 7% 2rem;
@@ -238,7 +239,7 @@ span {
   align-items: center;
   gap: 4rem;
   padding: 5rem 7%;
-  background: red; /* or your bg-color */
+  background: white; /* or your bg-color */
   flex-wrap: wrap;
 }
 
@@ -306,4 +307,76 @@ span {
   .about-content h2 {
     text-align: center;
   }
+}
+
+.services {
+  padding: 5rem 7%;
+  background: var(--bg-color);
+}
+
+.services .heading {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services .services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.services-container .services-box {
+  flex: 1 1 30rem;
+  background: var(--white-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.services-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.services-box i {
+  font-size: 4rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.services-box h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.services-box p {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.services-box .btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: var(--main-color);
+  border-radius: 0.6rem;
+  transition: 0.3s ease;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.services-box .btn:hover {
+  background: transparent;
+  color: var(--main-color);
+  border-color: var(--main-color);
 }
