@@ -544,3 +544,37 @@ span {
   position: relative;
   overflow: visible; /* This is important */
 }
+
+
+.testimonial-container {
+  overflow: visible;
+  position: relative;
+}
+
+.testimonial-wrapper {
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--main-color);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next {
+  right: 10px;
+  position: absolute;
+}
+
+.swiper-button-prev {
+  left: 10px;
+  position: absolute;
+}
