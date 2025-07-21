@@ -2,10 +2,10 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = () => {
+menuIcon?.addEventListener('click', () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
-};
+});
 
 // Scroll Sections Active Link
 let sections = document.querySelectorAll('section');
@@ -21,21 +21,28 @@ window.onscroll = () => {
 
     if (top >= offset && top < offset + height) {
       navLinks.forEach(link => link.classList.remove('active'));
-      let activeLink = document.querySelector(`header nav a[href*="${id}"]`);
-      if (activeLink) activeLink.classList.add('active');
+      document.querySelector(`header nav a[href*="${id}"]`)?.classList.add('active');
     }
   });
 
   // Sticky Navbar
-  let header = document.querySelector('.header');
-  header.classList.toggle('sticky', window.scrollY > 100);
+  document.querySelector('.header')?.classList.toggle('sticky', window.scrollY > 100);
 
-  // Remove Navbar on Scroll
-  menuIcon.classList.remove('bx-x');
-  navbar.classList.remove('active');
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+
+        menuIcon.onclick = () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+        };
+
+
+  // Collapse Menu on Scroll
+  menuIcon?.classList.remove('bx-x');
+  navbar?.classList.remove('active');
 };
 
-// Swiper Initialization
+// Swiper (make sure Swiper JS is linked)
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 50,
@@ -55,14 +62,14 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
-// Dark/Light Mode
+// Dark Mode
 let darkModeIcon = document.querySelector('#darkMode-icon');
-darkModeIcon.onclick = () => {
+darkModeIcon?.addEventListener('click', () => {
   darkModeIcon.classList.toggle('bx-sun');
   document.body.classList.toggle('dark-mode');
-};
+});
 
-// Scroll Reveal Animations
+// Scroll Reveal
 ScrollReveal({
   reset: true,
   distance: '80px',

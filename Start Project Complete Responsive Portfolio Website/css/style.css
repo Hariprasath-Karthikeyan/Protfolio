@@ -829,3 +829,128 @@ span {
     font-size: 2.6rem;
   }
 }
+/* Light Mode Defaults */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1f1f1f;
+  --main-color: #0ef;
+  --white-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Overrides */
+.dark-mode {
+  --bg-color: #0d1117; /* Soft dark blue/gray */
+  --text-color: #c9d1d9; /* Soft white text */
+  --main-color: #00ffee;
+  --white-color: #0d1117;
+  --shadow-color: rgba(0, 255, 255, 0.2);
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Ensure elements follow the new variables */
+body,
+.header,
+section,
+footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar & Buttons Adjustments in Dark Mode */
+.dark-mode .navbar a {
+  color: var(--text-color);
+}
+
+.dark-mode .navbar a.active,
+.dark-mode .navbar a:hover {
+  color: var(--main-color);
+}
+
+.dark-mode .btn {
+  background: var(--main-color);
+  color: #000;
+}
+
+/* Optional: Make swiper nav buttons visible in dark mode */
+.dark-mode .swiper-button-next,
+.dark-mode .swiper-button-prev {
+  color: var(--main-color);
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--heading-color);
+}
+
+section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.btn {
+  background: var(--main-color);
+  color: #000;
+  border: none;
+}
+
+.btn:hover {
+  background: #00cfcf;
+  color: #000;
+}
+.navbar a {
+  color: var(--text-color);
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: var(--main-color);
+}
+/* Default Light Mode */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color); /* default for light mode */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: 0.3s;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* When scrolling down */
+.header.sticky {
+  background: var(--bg-color);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Header Background */
+body.dark-mode .header {
+  background: #1f1f1f;  /* or your custom dark background */
+}
+
+/* Navbar links */
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color); /* should switch based on mode */
+  font-weight: 500;
+  margin-left: 3.5rem;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
