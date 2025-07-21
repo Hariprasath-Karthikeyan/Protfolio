@@ -592,3 +592,240 @@ span {
   left: 10px;
   position: absolute;
 }
+/* ========== BREAKPOINTS ========== */
+
+/* 1200px and below */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .home .profession-container {
+    height: 85.8rem;
+  }
+
+  .home .profession-container .profession-box {
+    right: -12rem;
+    height: 85.8rem;
+  }
+}
+
+/* 1024px and below */
+@media (max-width: 1024px) {
+  header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .home .profession-container .profession-box {
+    right: -22rem;
+  }
+
+  .home .portfolio-container {
+    right: -15rem;
+  }
+}
+.contact {
+  padding: 5rem 2rem;
+  background: var(--bg-color);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 3.5rem;
+  color: var(--main-color);
+  margin-bottom: 3rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+  max-width: 800px;
+  margin: auto;
+  background: var(--white-color);
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.contact form .input-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  flex: 1 1 48%;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 1rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: inset 0 0 0.3rem rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.contact form textarea {
+  width: 100%;
+  resize: none;
+  height: 180px;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0.3rem var(--main-color);
+}
+
+.contact form .btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: var(--main-color);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.contact form .btn:hover {
+  background: darken(var(--main-color), 10%);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 7%;
+  background: var(--main-color);
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+  color: var(--white-color);
+}
+
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--white-color);
+  border-radius: 0.8rem;
+  border: 0.2rem solid var(--main-color);
+  outline: 0.2rem solid transparent;
+  transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+  outline-color: var(--white-color);
+  transform: translateY(-4px);
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: #333;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#menu-icon:hover {
+  color: var(--main-color);
+  transform: scale(1.1);
+}
+
+/* Show menu icon on smaller screens */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+  }
+}
+
+/* 991px and below */
+@media (max-width: 991px) {
+  .navbar a:nth-child(1),
+  .navbar a:nth-child(2) {
+    color: var(--main-color);
+  }
+
+  .navbar a.active::before {
+    background: var(--main-color);
+    opacity: 0.7;
+  }
+
+  .home .home-content {
+    max-width: 50rem;
+  }
+
+  .home .profession-container .profession-box {
+    right: -45rem;
+  }
+
+  .services,
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+
+  .contact {
+    min-height: auto;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    display: none; /* You can toggle this using JavaScript */
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+
+  .navbar a.active {
+    color: var(--main-color);
+  }
+
+  #darkMode-icon {
+    position: absolute;
+    right: 7rem;
+    font-size: 2.6rem;
+  }
+}
